@@ -1,14 +1,14 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Navbar } from './components'
 import LottiePreview from './pages/LottiePreview'
 import ProductDetail from './pages/ProductDetail'
 import VideoAnimationBodymovin from './pages/VideoAnimationBodymovin'
 
-// import {Navbar} from './components'
-
 const router = createBrowserRouter([
+  { path: '/', element: <h1>Welcome to the Playground</h1> },
   {
-    path: '/',
+    path: '/vectary',
     element: <ProductDetail />,
   },
   {
@@ -22,7 +22,14 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <>
+      <Navbar />
+      <div className='relative'>
+        <RouterProvider router={router} />
+      </div>
+    </>
+  )
 }
 
 export default App
