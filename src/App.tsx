@@ -1,25 +1,23 @@
 import React from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import LottiePreview from './pages/LottiePreview'
 import ProductDetail from './pages/ProductDetail'
+
 // import {Navbar} from './components'
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-// } from 'react-router-dom';
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: ProductDetail,
-//   },
-// ]);
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <ProductDetail />,
+  },
+  {
+    path: '/lottie-preview',
+    element: <LottiePreview />,
+  },
+])
 
 function App() {
-  return (
-    <>
-      {/* <Navbar /> */}
-      <ProductDetail />
-      {/* <RouterProvider router={router} /> */}
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

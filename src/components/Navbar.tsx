@@ -1,3 +1,13 @@
+import React from 'react'
+
+const Navbar = () => (
+  <div>
+    <p>Navbar</p>
+  </div>
+)
+
+export default Navbar
+
 // import React, { Fragment } from 'react'
 // import { Popover, Transition } from '@headlessui/react'
 // import {
