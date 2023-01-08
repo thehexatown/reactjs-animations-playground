@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Lottie from 'lottie-web'
-import { BoltIcon, PauseIcon, PlayIcon } from '@heroicons/react/24/outline'
+import { BoltIcon, PauseIcon, PlayIcon, TrashIcon } from '@heroicons/react/24/outline'
 import HalloweenPumpkinCat from '../assets/9969-halloween-pumpkin-black-cat.json'
 
 const LottiePreview = () => {
@@ -35,6 +35,10 @@ const LottiePreview = () => {
     if (catAnimLottie.current) catAnimLottie.current.play()
   }
 
+  const destroyAnimation = () => {
+    if (catAnimLottie.current) catAnimLottie.current.destroy()
+  }
+
   return (
     <div className='container mx-auto'>
       <h1>Demonstration of Lottie Web</h1>
@@ -45,23 +49,28 @@ const LottiePreview = () => {
           onClick={loadAnimation}
           className='bg-green-400 px-3 py-1 flex flex-row items-center gap-x-1'>
           <BoltIcon className='w-5 h-5' />
-          Load Animation
+          Load
         </button>
         <button
           type='button'
           onClick={playAnimation}
           className='bg-blue-400 px-3 py-1 flex flex-row items-center gap-x-'>
-          {' '}
           <PlayIcon className='w-5 h-5' />
-          Play Animation
+          Play
         </button>
         <button
           type='button'
           onClick={pauseAnimation}
           className='bg-pink-400 px-3 py-1 flex flex-row items-center gap-x-'>
-          {' '}
           <PauseIcon className='w-5 h-5' />
-          Pause Animation
+          Pause
+        </button>
+        <button
+          type='button'
+          onClick={destroyAnimation}
+          className='bg-red-400 px-3 py-1 flex flex-row items-center gap-x-'>
+          <TrashIcon className='w-5 h-5' />
+          Destroy
         </button>
       </div>
     </div>
