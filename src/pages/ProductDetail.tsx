@@ -1,8 +1,6 @@
-import React from 'react';
-import { Buckle } from '../components';
+import React from 'react'
+import { Buckle } from '../components'
 
-const ProductDetail = () => (
-  <Buckle />
-)
+const ProductDetail = () => <Buckle />
 
-export default ProductDetail;
+export default ProductDetail

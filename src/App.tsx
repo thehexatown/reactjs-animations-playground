@@ -1,11 +1,10 @@
-import React from 'react';
-import ProductDetail from './pages/ProductDetail';
+import React from 'react'
+import ProductDetail from './pages/ProductDetail'
 // import {Navbar} from './components'
 // import {
 //   createBrowserRouter,
 //   RouterProvider,
 // } from 'react-router-dom';
-
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -17,10 +16,10 @@ function App() {
   return (
     <>
       {/* <Navbar /> */}
-      <ProductDetail/>
+      <ProductDetail />
       {/* <RouterProvider router={router} /> */}
     </>
-  );
+  )
 }
 
-export default App;
+export default App
