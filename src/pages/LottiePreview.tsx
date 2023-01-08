@@ -41,38 +41,42 @@ const LottiePreview = () => {
 
   return (
     <div className='container mx-auto'>
-      <h1>Demonstration of Lottie Web</h1>
-      <div className='w-96 h-96' ref={catAnimRef} />
-      <div className='flex fixed top-7 right-7 gap-x-2'>
-        <button
-          type='button'
-          onClick={loadAnimation}
-          className='bg-green-400 px-3 py-1 flex flex-row items-center gap-x-1'>
-          <BoltIcon className='w-5 h-5' />
-          Load
-        </button>
-        <button
-          type='button'
-          onClick={playAnimation}
-          className='bg-blue-400 px-3 py-1 flex flex-row items-center gap-x-'>
-          <PlayIcon className='w-5 h-5' />
-          Play
-        </button>
-        <button
-          type='button'
-          onClick={pauseAnimation}
-          className='bg-pink-400 px-3 py-1 flex flex-row items-center gap-x-'>
-          <PauseIcon className='w-5 h-5' />
-          Pause
-        </button>
-        <button
-          type='button'
-          onClick={destroyAnimation}
-          className='bg-red-400 px-3 py-1 flex flex-row items-center gap-x-'>
-          <TrashIcon className='w-5 h-5' />
-          Destroy
-        </button>
+      <div className='p-4 flex justify-between'>
+        <h1 className='text-xl'>Demonstration of Lottie Web</h1>
+        <div className='flex gap-x-2'>
+          <button
+            type='button'
+            onClick={loadAnimation}
+            className='bg-green-400 px-3 py-1 flex flex-row items-center gap-x-1'>
+            <BoltIcon className='w-5 h-5' />
+            Load
+          </button>
+          <button
+            type='button'
+            onClick={playAnimation}
+            className='bg-blue-400 px-3 py-1 flex flex-row items-center gap-x-'>
+            <PlayIcon className='w-5 h-5' />
+            Play
+          </button>
+          <button
+            type='button'
+            onClick={pauseAnimation}
+            className='bg-pink-400 px-3 py-1 flex flex-row items-center gap-x-'>
+            <PauseIcon className='w-5 h-5' />
+            Pause
+          </button>
+          <button
+            type='button'
+            onClick={destroyAnimation}
+            className='bg-red-400 px-3 py-1 flex flex-row items-center gap-x-'>
+            <TrashIcon className='w-5 h-5' />
+            Destroy
+          </button>
+        </div>
       </div>
+      <hr />
+
+      <div className='w-96 h-96' ref={catAnimRef} />
     </div>
   )
 }
