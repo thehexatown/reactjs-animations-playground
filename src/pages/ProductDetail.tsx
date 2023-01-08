@@ -1,12 +1,8 @@
-import { Buckle, Navbar } from "../components";
+import React from 'react';
+import { Buckle } from '../components';
 
-const ProductDetail = () => {
-  return (
-    <>
-      <Navbar />
-      <Buckle />
-    </>
-  );
-};
+const ProductDetail = () => (
+  <Buckle />
+)
 
 export default ProductDetail;

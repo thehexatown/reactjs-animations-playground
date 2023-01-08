@@ -1,7 +1,7 @@
-import Buckle from "./Buckle";
-import Navbar from "./Navbar";
+import Buckle from './Buckle';
+// import Navbar from './Navbar';
 
-export {
+export default {
   Buckle,
-  Navbar
+  // Navbar
 }
